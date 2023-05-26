@@ -23,16 +23,19 @@ V(G) = 11
 
 <table><thead><tr><th>Branch</th><th>Completed</th></tr></thead><tbody><tr><td>[2]</td><td>*</td></tr><tr><td>[4]</td><td>*</td></tr><tr><td>[7]</td><td>*</td></tr><tr><td>[9]</td><td>*</td></tr><tr><td>[11]</td><td>*</td></tr><tr><td>[13]</td><td>*</td></tr><tr><td>[18]</td><td>*</td></tr><tr><td>[20]</td><td>*</td></tr><tr><td>[21]</td><td>*</td></tr><tr><td>[22]</td><td>*</td></tr></tbody></table>
 
-Гранка [2] се завршува кога условот (user == null || user.getPassword() == null || user.getEmail() == null) е точен.
-Гранка [4] се завршува кога условот user.getUsername() == null е точен.
-Гранка [7] се завршува кога условот user.getEmail().contains("@") && user.getEmail().contains(".") е точен.
-Гранка [9] се завршува кога условот i < allUsers.size() во циклусот е точен.
-Гранка [11] се завршува кога условот existingUser.getEmail() == user.getEmail() е точен.
-Гранка [13] се завршува кога условот existingUser.getUsername() == user.getUsername() е точен.
-Гранка [18] се завршува кога условот passwordLower.contains(user.getUsername().toLowerCase()) || password.length() < 8 е точен.
-Гранка [20] се завршува кога условот !passwordLower.contains(" ") е точен.
-Гранка [21] се завршува кога условот i < specialCharacters.length() во циклусот е точен.
-Гранка [22] се завршува кога условот password.contains(String.valueOf(specialCharacters.charAt(i))) е точен.
+<ol>
+    <li>Гранка [2] е завршена кога условот (user == null || user.getPassword() == null || user.getEmail() == null) е точен.</li>
+    <li>Гранка [4] е завршена кога условот user.getUsername() == null е точен.</li>
+    <li>Гранка [7] е завршена кога условот user.getEmail().contains("@") && user.getEmail().contains(".") е точен.</li>
+    <li>Гранка [9] е завршена кога условот i < allUsers.size() за циклусот е точен.</li>
+    <li>Гранка [11] е завршена кога условот existingUser.getEmail() == user.getEmail() е точен.</li>
+    <li>Гранка [13] е завршена кога условот existingUser.getUsername() == user.getUsername() е точен.</li>
+    <li>Гранка [18] е завршена кога условот passwordLower.contains(user.getUsername().toLowerCase()) || password.length() < 8 е точен.</li>
+    <li>Гранка [20] е завршена кога условот !passwordLower.contains(" ") е точен.</li>
+    <li>Гранка [21] е завршена кога условот i < specialCharacters.length() за циклусот е точен.</li>
+    <li>Гранка [22] е завршена кога условот password.contains(String.valueOf(specialCharacters.charAt(i))) е точен.</li>
+</ol>
+
 
 Multiple Condition
 
